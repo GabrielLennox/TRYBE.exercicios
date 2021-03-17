@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2 id="page-title">Título</h2>
+    <p id="paragraph" class="paragrafos"><span class="paragrafos">Dê uma cor para este parágrafo!</span></p>
+    <h4 id="subtitle">Subtítulo</h4>
+    <p id="second-paragraph" class="paragrafos"><span class="paragrafos">Segundo parágrafo!</span></p>
+    <script>
+      var paragraph = document.getElementById("paragraph");
+      paragraph.style.color = "red";
+      paragraph.innerText = 'Mack Miller 4 Ever';
+      document.getElementById("second-paragraph").innerText = 'the kid was one of the greats';
+      document.getElementById("subtitle").innerText = 'NERVER 4GET';
+      let paragrafos = document.getElementsByClassName("paragrafos");
+      for (let i = 0; i <paragrafos.length; 1++) {
+        paragrafos[i].style.color = "green";
+      }
+    </script>
+  </body>
+</html>
