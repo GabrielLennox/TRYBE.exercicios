@@ -1,0 +1,52 @@
+Quais são seus principais componentes?
+
+Quais suas variações?
+
+Arquivos e processos, o que são?
+
+Qual a estrutura de diretórios?
+
+O que é o terminal?
+
+Comandos executados no Bash.
+	ls = lista todos os arquivos e diretorios existentes no diretorio atual
+	 	-a = lista os arquivos ocultos 
+	 	* = lista TUDO, todos os subdiretorios e arquivos presentes neles
+	 	? = substitui um caracter (wildcard)
+	cd [directory.pwd] = navegar por diretórios (change directory)
+	 	. = referencia o diretorio atual 
+	 	.. = referencia o diretorio pai 
+	clear = limpa terminal (não apaga o historico de comandos, apenas limpa a interface, como se desse um scroll)
+	mkdir [directory.name] = criar diretorio (make directory)
+	pwd =  mostra o diretorio completo, caminho completo do sistema do diretorio atual
+	cp [fileName] [newFileName.pwd] = copiar e mover arquivos
+	mv [fileName] [pwd] = mover arquivos 
+	rm [fileName] = remover arquivo 
+	 	-rf [fileName || directoryName] = apagar diretorios nao vazios e todo seu conteudo (force remove)
+	rmdir [directoryName] = remover diretorio (vazio)
+	less [fileName] = abre o arquivo e exibe o conteudo em paginas
+	 	(spacebar) = proxima pagina
+	 	q = finaliza visualizacao (quit)
+	 	/[keyword] = busca pela palavra chave no arquivo
+	 		n = proximo resultado da busca por palavra chave (next)
+	head [fileName] = abre e exibe as 10 primeiras linhas do arquivo
+	 	-[number] = mostra n primeiras linhas do arquivo 
+	tail [fileName] = abre e exibe as 10 ultimas linhas do arquivo
+	 	-[number] = mostra n ultimas linhas do arquivo 
+	grep [keyword] [fileName] = busca por palavra chave dentro do arquivo (case sensitive)
+	 	-i = ignora maiusculo (ignore case sensitive)
+	 	'[keywords]' = caso queira buscar por mais de uma palavra, utilizar frase dentro de aspas simples
+	 	-v = busca contraria, tem como resultado todos os valores que NAO tem a palavra chave 
+	 	-n = mostra o numero da linha do resultado
+	 	-c = mostra o numero de vezes que a palavra chave e encontrada no arquivo (count)
+	wc [fileName] = retorna qntd de linhas, palavras e caracteres do arquivo (word count) 
+	 	-w = somente qntd de palavras 
+	 	-l = somente numero de linhas 
+	 	-c = somente caracteres
+	man [command] = manual do comando 
+	whatis [command] = explicacao resumida da funcao do comando
+	apropos [keyword] = exibe comandos com funcoes relacionadas a palavra chave
+	xdg-open [directory] = abrir diretorio na interface visual
+
+TIP: nao usar espacos na hora de nomear arquivos
+
