@@ -1,0 +1,8 @@
+Internet
+Unix
+Bash
+Trello
+Slack
+Zoom
+VS Code
+Linux Terminal
