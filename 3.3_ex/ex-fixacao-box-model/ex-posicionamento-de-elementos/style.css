@@ -1,0 +1,39 @@
+.super-mario {
+    height: 380px;
+    left: 10%;
+    position: fixed;
+    z-index: 3;
+}
+
+.goomba {
+    height: 200px;
+    top: 450px;
+    left: 20%;
+    position: absolute;
+}
+
+.baloon {
+    width: 220px;
+    right: 280px;
+    position: absolute;
+    z-index: 1;
+}
+
+.bowser {
+    height: 320px;
+    top: 120px;
+    position: absolute;
+    right: 20px;
+}
+
+.word {
+    top: 110px;
+    right: 320px;
+    position: absolute;
+    z-index: 2;
+}
+
+.word:hover {
+    text-transform: uppercase;
+    color: red;
+}
