@@ -21,8 +21,8 @@ ol li:not(:first-child):not(:nth-child(even)) {
     text-transform: uppercase;
 /* essa logica NAO ESCALA
 funciona em listas com ate 9 elementos.
-a combinacao de pseudoclasses exclui o elem 1 e elem impares
-essas regras nao excluem o 9, que nao e nuemro primo */
+a combinacao de pseudoclasses exclui o elem 1 e elems impares
+essas regras nao excluem o 9, que nao e numero primo */
 }
 
 :is(h1, h2, h3, h4, h5, h6) {
@@ -43,12 +43,12 @@ li em{
 }
 /* Na listagem de linguagens de programação, faça com que as 3 primeiras da lista possuam cor de fonte azul e, se alguma possuir "java*" no texto, utilize uma cor de fundo rosa. */
 ul:first-of-type li:nth-child(-n+3) {
-    color:green;
+    color:blue;
 }
 
 .java {
     /* class criada no HTML
-    nao encontrei forma condicionar estilizacao por conteudo do elemento
+    nao encontrei forma de condicionar estilizacao por conteudo do elemento
     conteudo HTML inacessivel*/
     background-color: pink;
     /* uma solucao escalavel seria

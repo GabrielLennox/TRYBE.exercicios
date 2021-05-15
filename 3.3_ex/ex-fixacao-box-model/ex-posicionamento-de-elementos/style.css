@@ -35,5 +35,6 @@
 
 .word:hover {
     text-transform: uppercase;
+    
     color: red;
 }
