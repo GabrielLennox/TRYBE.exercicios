@@ -2,17 +2,17 @@ h1 {
   text-align: center;
 }
 
-ul {
-  list-style-type: none;
-  padding: 0px;
-}
-
 section:nth-of-type(2) {
   text-align: center;
 }
 
 section:nth-of-type(2) li {
   display: inline;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0px;
 }
 
 .first {
