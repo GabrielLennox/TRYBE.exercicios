@@ -11,3 +11,5 @@ birthYear = 2030;
 console.log(birthYear);
 
 birthCity = "Montreal"; // birthCity e uma constante, sendo assim, nao se pode reatribuir seu valor
+
+console.log(birthCity);
