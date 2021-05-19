@@ -109,3 +109,36 @@ if (typeof angle1 !== 'number' || angle1 < 0 || typeof angle2 !== 'number' || an
     console.log('These angles do not form a triangle');
   };
 };
+
+// 6 - Escreva um programa que receba o nome de uma peça de xadrez e retorne os movimentos que ela faz.
+
+let chessPiece = 'kinG';
+
+switch (String(chessPiece).toLowerCase()) {
+  case 'pawn':
+    console.log('Pawns can only move forward. On their first move, they can move one or two squares. Afterwards, they can move only one square at a time. They can capture an enemy piece by moving one square forward diagonally');
+    break;
+
+  case 'bishop':
+    console.log('Bishops can move any number of squares diagonally');
+    break;
+
+  case 'knight':
+    console.log('Knights can move only in an L-shape, one square up and two over, or two squares over and one down, or any such combination of one-two or two-one movements in any direction');
+    break;
+
+  case 'rook':
+    console.log('Rooks can move any number of squares, up and down and side to side');
+    break;
+
+  case 'queen':
+    console.log('The Queen can move any number of squares along ranks, files and diagonals');
+    break;
+
+  case 'king':
+    console.log('Kings can move one square at a time in any direction');
+    break;
+
+  default:
+    console.log('Not a chess piece');
+};
