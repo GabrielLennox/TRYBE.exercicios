@@ -142,3 +142,45 @@ switch (String(chessPiece).toLowerCase()) {
   default:
     console.log('Not a chess piece');
 };
+
+// 7 - Escreva um programa que converte uma nota dada em porcentagem (de 0 a 100) em conceitos de A a F.
+// Porcentagem >= 90 -> A
+// Porcentagem >= 80 -> B
+// Porcentagem >= 70 -> C
+// Porcentagem >= 60 -> D
+// Porcentagem >= 50 -> E
+// Porcentagem < 50 -> F
+
+let grade = '100';
+
+// null value returns F ??
+
+if (Number(grade) < 0 || Number(grade) > 100) {
+  console.log('invalid grade');
+} else {
+  switch (true) {
+    case (Number(grade) < 50):
+      console.log('F');
+      break;
+
+    case (Number(grade) < 60):
+      console.log('E');
+      break;
+
+    case (Number(grade) < 70):
+      console.log('D');
+      break;
+
+    case (Number(grade) < 80):
+      console.log('C');
+      break;
+
+    case (Number(grade) < 90):
+      console.log('B');
+      break;
+
+    case (Number(grade) <= 100):
+      console.log('A');
+      break;
+  };
+};
