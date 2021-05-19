@@ -1,3 +1,5 @@
+// 1 - Faça cinco programas, um para cada operação aritmética básica.
+
 let a = 5;
 let b = '5';
 
@@ -37,6 +39,8 @@ console.log(divide);
 let remainder = a % b;
 console.log(remainder);
 
+// 2 - Faça um programa que retorne o maior de dois números.
+
 if (a > b) {
   console.log(a);
 } else if (a < b) {
@@ -45,4 +49,63 @@ if (a > b) {
   console.log('The numbers are equal');
 } else {
   console.log('invalid comparison');
+};
+
+// 3 - Faça um programa que retorne o maior de três números.
+
+let num1 = 2;
+let num2 = 3;
+let num3 = 1;
+let largest;
+
+if (typeof num1 !== 'number' || typeof num2 !== 'number' || typeof num3 !== 'number') {
+  console.log('invalid input');
+} else {
+  if (num1 > num2 && num1 > num3) {
+    largest = num1;
+  } else if (num2 > num1 && num2 > num3) {
+    largest = num2;
+  } else if (num3 > num1 && num3 > num2) {
+    largest = num3;
+  };
+};
+
+if (largest !== undefined) {
+  console.log(largest);
+} else {
+  console.log('error')
+};
+
+// 4 - Faça um programa que, dado um valor definido numa variável, retorne "positive" se esse valor for positivo, "negative" se for negativo e "zero" caso contrário.
+
+let integer = 'banana';
+
+if (typeof integer !== 'number') {
+  console.log('invalid input');
+} else {
+  if (integer > 0) { 
+    console.log('positive');
+  } else if (integer < 0) {
+    console.log('negative');
+  } else {
+    console.log('zero');
+  };
+};
+
+// 5 - Faça um programa que defina três variáveis com os valores dos três ângulos internos de um triângulo.
+// Para os ângulos serem de um triângulo válido, a soma dos três devem ser 180 graus.
+// Um ângulo será considerado inválido se não tiver um valor positivo.
+
+let angle1 = 60;
+let angle2 = 60;
+let angle3 = 60;
+
+if (typeof angle1 !== 'number' || angle1 < 0 || typeof angle2 !== 'number' || angle2 < 0 || typeof angle3 !== 'number' || angle3 < 0 ) {
+  console.log('invalid angle');
+} else {
+  if (angle1 + angle2 + angle3 === 180) {
+    console.log('Quite the triangle youve got there');
+  } else {
+    console.log('These angles do not form a triangle');
+  };
 };
