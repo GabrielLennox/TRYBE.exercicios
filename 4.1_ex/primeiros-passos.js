@@ -100,7 +100,7 @@ let angle1 = 60;
 let angle2 = 60;
 let angle3 = 60;
 
-if (typeof angle1 !== 'number' || angle1 < 0 || typeof angle2 !== 'number' || angle2 < 0 || typeof angle3 !== 'number' || angle3 < 0 ) {
+if (typeof angle1 !== 'number' || angle1 < 0 || typeof angle2 !== 'number' || angle2 < 0 || typeof angle3 !== 'number' || angle3 < 0) {
   console.log('invalid angle');
 } else {
   if (angle1 + angle2 + angle3 === 180) {
@@ -183,4 +183,48 @@ if (Number(grade) < 0 || Number(grade) > 100) {
       console.log('A');
       break;
   };
+};
+
+// 8 - Escreva um programa que defina três números em variáveis e retorne true se pelo menos uma das três for par.
+// Bonus: use somente um if
+
+let isItEven1 = 0;
+let isItEven2 = '2';
+let isItEven3 = 0;
+
+if ((isItEven1 != 0 && isItEven1 % 2 === 0) || (isItEven2 != 0 && isItEven2 % 2 === 0) || (isItEven3 != 0 && isItEven3 % 2 === 0)) {
+  console.log(true);
+} else {
+  console.log(false);
+};
+
+// 9 - Escreva um programa que defina três números em variáveis e retorne true se pelo menos uma das três for ímpar.
+//Bonus: use somente um if .
+
+let isItOdd1 = 1;
+let isItOdd2 = '2';
+let isItOdd3 = 4;
+
+if ((isItOdd1 != 0 && isItOdd1 % 2 != 0) || (isItOdd2 != 0 && isItOdd2 % 2 != 0) || (isItOdd3 != 0 && isItOdd3 % 2 != 0)) {
+  console.log(true);
+} else {
+  console.log(false);
+};
+
+// 10 - Escreva um programa que se inicie com dois valores em duas variáveis diferentes: o custo de um produto e seu valor de venda. A partir dos valores, calcule quanto de lucro (valor de venda descontado o custo do produto) a empresa terá ao vender mil desses produtos.
+// Atente que, sobre o custo do produto, incide um imposto de 20%.
+// Seu programa também deve emitir uma mensagem de erro e encerrar caso algum dos seus valores de entrada seja menor que zero.
+// O lucro de um produto é o resultado da subtração do valor de venda pelo custo do mesmo, sendo que o imposto de 20% também faz parte do valor de custo.
+// valorCustoTotal = valorCusto + impostoSobreOCusto
+// lucro = valorVenda - valorCustoTotal (lucro de um produto)
+
+let buy = 0;
+let sell = 20;
+let tax = 0.2;
+let profit = sell - (buy + (buy * tax));
+
+if (buy == 0 || sell == 0) {
+  console.log('ERROR');
+} else {
+  console.log(profit * 1000);
 };
