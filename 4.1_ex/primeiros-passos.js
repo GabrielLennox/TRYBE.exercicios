@@ -228,3 +228,88 @@ if (buy == 0 || sell == 0) {
 } else {
   console.log(profit * 1000);
 };
+
+// 11 - Faça um programa que, dado um salário bruto, calcule o líquido a ser recebido.
+// Uma pessoa que trabalha de carteira assinada no Brasil tem descontados de seu salário bruto o INSS e o IR.
+// INSS (Instituto Nacional do Seguro Social)
+//   Salário bruto até R$ 1.556,94: alíquota de 8%
+//   Salário bruto de R$ 1.556,95 a R$ 2.594,92: alíquota de 9%
+//   Salário bruto de R$ 2.594,93 a R$ 5.189,82: alíquota de 11%
+//   Salário bruto acima de R$ 5.189,82: alíquota máxima de R$ 570,88
+// IR (Imposto de Renda)
+//   Até R$ 1.903,98: isento de imposto de renda
+//   De R$ 1.903,99 a 2.826,65: alíquota de 7,5% e parcela de R$ 142,80 a deduzir do imposto
+//   De R$ 2.826,66 a R$ 3.751,05: alíquota de 15% e parcela de R$ 354,80 a deduzir do imposto
+//   De R$ 3.751,06 a R$ 4.664,68: alíquota de 22,5% e parcela de R$ 636,13 a deduzir do imposto
+//   Acima de R$ 4.664,68: alíquota de 27,5% e parcela de R$ 869,36 a deduzir do imposto.
+// Para descobrir o salário-base, subtraia do salário bruto a alíquota do INSS
+
+let salarioBruto = 3000;
+let INSS;
+let IR;
+
+// if (salarioBruto > 5189.82) {
+//   INSS = 570.88;
+// } else if (salarioBruto > 2594.92) {
+//   INSS = salarioBruto * 0.11;
+// } else if (salarioBruto > 1556.94) {
+//   INSS = salarioBruto * 0.09;
+// } else {
+//   INSS = salarioBruto * 0.08;
+// };
+
+switch (true) {
+  case (salarioBruto > 5189.82):
+    INSS = 570.88;
+    break;
+
+  case (salarioBruto > 2594.92):
+    INSS = salarioBruto * 0.11;
+    break;
+
+  case (salarioBruto > 1556.94):
+    INSS = salarioBruto * 0.09;
+    break;
+
+  default:
+    INSS = salarioBruto * 0.08;
+};
+
+let salarioBase = salarioBruto - INSS;
+
+// if (salarioBase > 4664.68) {
+//   IR = (salarioBase * 0.275) - 869.36;
+// } else if (salarioBase > 3751.05) {
+//   IR = (salarioBase * 0.225) - 636.13;
+// } else if (salarioBase > 2826.65) {
+//   IR = (salarioBase * 0.15) - 354.80;
+// } else if (salarioBase > 1903.98) {
+//   IR = (salarioBase * 0.075) - 142.8;
+// } else {
+//   IR = 0;
+// };
+
+switch (true) {
+  case (salarioBase > 4664.68):
+    IR = (salarioBase * 0.275) - 869.36;
+    break;
+
+  case (salarioBase > 3751.05):
+    IR = (salarioBase * 0.225) - 636.13;
+    break;
+
+  case (salarioBase > 2826.65):
+    IR = (salarioBase * 0.15) - 354.80;
+    break;
+
+  case (salarioBase > 1903.98):
+    IR = (salarioBase * 0.075) - 142.8;
+    break;
+
+  default:
+    IR = 0;
+}
+
+let salarioLiquido = salarioBase - IR;
+
+console.log(salarioLiquido.toFixed(2));
