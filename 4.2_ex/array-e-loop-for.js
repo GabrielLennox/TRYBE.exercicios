@@ -14,4 +14,10 @@ for (const number of numbers) {
   sum += number;
 };
 
-console.log(sum);
+// console.log(sum);
+
+// 3 - Para o terceiro exercício, calcule e imprima a média aritmética dos valores contidos no array;
+
+let average = sum / numbers.length;
+
+console.log(average);
