@@ -55,7 +55,19 @@ for (const number of numbers) {
 };
 
 if (oddCount === 0) {
-  console.log('nenhum valor ímpar encontrado');
+  // console.log('nenhum valor ímpar encontrado');
 } else {
-  console.log(oddCount);
+  // console.log(oddCount);
 };
+
+// 7 - Utilizando for , descubra qual o menor valor contido no array e imprima-o;
+
+let lowestNumber = numbers[0];
+
+for (const number of numbers) {
+  if (number < lowestNumber) {
+    lowestNumber = number;
+  };
+};
+
+console.log(lowestNumber);
