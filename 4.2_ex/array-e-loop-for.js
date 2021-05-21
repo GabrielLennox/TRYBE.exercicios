@@ -88,5 +88,53 @@ for (let index = 0; index < 25; index += 1) {
 // 9 - Utilizando o array criado no exercício anterior imprima o resultado da divisão de cada um dos elementos por 2.
 
 for (const element of arr) {
-  console.log(element / 2);
+  // console.log(element / 2);
 };
+
+// BONUS
+
+// 1 - Ordene o array numbers em ordem crescente e imprima seus valores;
+
+// for (let i = 1; i < numbers.length; i += 1) {
+//   for (let j = 0; j < i; j += 1) {
+//     if (numbers[j] > numbers[i]) {
+//       // let temp = numbers[i];
+//       // numbers[i] = numbers[j];
+//       // numbers[j] = temp;
+//       [numbers[i], numbers[j]] = [numbers[j], numbers[i]];
+//     };
+//   };
+// };
+
+// // console.log(numbers);
+
+// // 2 - Ordene o array numbers em ordem decrescente e imprima seus valores;
+
+// for (let i = 1; i < numbers.length; i += 1) {
+//   for (let j = 0; j < i; j += 1) {
+//     if (numbers[j] < numbers[i]) {
+//       // let temp = numbers[i];
+//       // numbers[i] = numbers[j];
+//       // numbers[j] = temp;
+//       [numbers[i], numbers[j]] = [numbers[j], numbers[i]];
+//     };
+//   };
+// };
+
+// console.log(numbers);
+
+// 3 - Agora crie um novo array a partir do array numbers , sem perdê-lo. Cada valor do novo array deverá ser igual ao valor correspondente no array numbers multiplicado pelo seguinte. Por exemplo: o primeiro valor do novo array deverá ser 45, pois é a multiplicação de 5 (primeiro valor) e 9 (valor seguinte). Já o segundo valor do novo array deverá ser 27, pois é a multiplicação de 9 (segundo valor) e 3 (valor seguinte), e assim por diante. Caso não haja próximo valor, a multiplicação deverá ser feita por 2.
+
+let newArray = [];
+
+for (let index = 0; index < numbers.length; index += 1) {
+  let element;
+  if (numbers[index + 1] !== undefined) {
+    element = numbers[index] * numbers[index + 1];
+  } else {
+    element = numbers[index] * 2;
+  };
+  newArray.push(element);
+};
+
+console.log(newArray);
