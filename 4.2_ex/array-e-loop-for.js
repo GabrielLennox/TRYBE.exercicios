@@ -42,4 +42,20 @@ for (const number of numbers) {
   };
 };
 
-console.log(greatestNumber);
+// console.log(greatestNumber);
+
+// 6 - Descubra quantos valores ímpares existem no array e imprima o resultado. Caso não exista nenhum, imprima a mensagem: "nenhum valor ímpar encontrado";
+
+let oddCount = 0;
+
+for (const number of numbers) {
+  if (number % 2 !== 0) {
+    oddCount += 1;
+  };
+};
+
+if (oddCount === 0) {
+  console.log('nenhum valor ímpar encontrado');
+} else {
+  console.log(oddCount);
+};
