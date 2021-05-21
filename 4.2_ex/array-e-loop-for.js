@@ -27,7 +27,19 @@ let average = sum / numbers.length;
 // 4 - Com o mesmo código do exercício anterior, caso o valor final seja maior que 20, imprima a mensagem: "valor maior que 20". Caso não seja, imprima a mensagem: "valor menor ou igual a 20";
 
 if (average <= 20) {
-  console.log('valor menor ou igual a 20');
+  // console.log('valor menor ou igual a 20');
 } else {
-  console.log('valor maior que 20');
+  // console.log('valor maior que 20');
 };
+
+// 5 - Utilizando for , descubra qual o maior valor contido no array e imprima-o.
+
+let greatestNumber = numbers[0];
+
+for (const number of numbers) {
+  if (number > greatestNumber) {
+    greatestNumber = number;
+  };
+};
+
+console.log(greatestNumber);
