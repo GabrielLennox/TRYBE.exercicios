@@ -99,13 +99,12 @@ for (let row = 1; row <= n; row += 1) {
 // !Um número primo é um número que só é divisível por 1 e por ele mesmo, ou seja, a divisão dele com quaisquer outros números dá resto diferente de zero.
 console.log('EX 6');
 
-let number = 7;
 let divCount = 0;
 let prime = false;
 
-if (number !== 0) {
-  for (let index = 1; index <= number; index += 1) {
-    if (number % index === 0) {
+if (n !== 0) {
+  for (let index = 1; index <= n; index += 1) {
+    if (n % index === 0) {
       divCount += 1;
     };
   };
@@ -115,4 +114,8 @@ if (divCount === 2) {
   prime = true;
 };
 
-console.log(prime);
+if (prime === true) {
+  console.log(n + ' is a prime number');
+} else {
+  console.log(n + ' is not a prime number')
+};
