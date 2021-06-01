@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2 id="page-title">Título</h2>
+    <p id="paragraph" class="paragraph">Dê uma cor para este parágrafo!</p>
+    <h4 id="subtitle">Subtítulo</h4>
+    <p id="second-paragraph" class="paragraph">Segundo parágrafo!</p>
+
+    <script>
+
+// 1 - Recupere o elemento que contém o título da página e faça algo com ele, como alterá-lo para o nome do seu filme favorito.
+
+// 2 - Agora recupere o segundo parágrafo e use sua criatividade para alterá-lo.
+
+// 3 - Por fim, recupere o subtítulo e altere-o também.
+
+// ----
+// PT 2
+// ----
+
+// 1 - Adicione uma classe igual para os dois parágrafos.
+
+// 2 - Recupere os seus parágrafos via código JavaScript , usando a função getElementsByClassName.
+
+// 3 - Altere algum estilo do primeiro deles.
+
+// 4 - Recupere o subtítulo e altere a cor dele usando a função getElementsByTagName.
+
+// ----
+// PT 3
+// ----
+
+// Para praticar, substitua todas as funções que você usou no exercício anterior por querySelector e/ou querySelectorAll .
+
+      // const paragraph = document.getElementById("paragraph");
+      const paragraph = document.querySelector("#paragraph");
+      paragraph.style.color = "red";
+
+      // const title = document.getElementById("page-title");
+      const title = document.querySelector("#page-title");
+      title.innerHTML = '<strong>Fight <br>Club</strong>'; // HTML tags are accepted and read correctly
+
+      // const secondParagraph = document.getElementById("second-paragraph");
+      const secondParagraph = document.querySelector("#second-paragraph");
+      secondParagraph.innerHTML = '<hr>';
+
+      // const subtitle = document.getElementById("subtitle");
+      const subtitle = document.querySelector("#subtitle");
+      subtitle.innerHTML = '<strong>Rules of Fight Club</strong><br><ol><li>You do not talk about Fight Club</li></ol>';
+
+      // const allParagraphs = document.getElementsByClassName("paragraph");
+      const allParagraphs = document.querySelectorAll(".paragraph");
+
+      allParagraphs[0].style.backgroundColor = "gray";
+
+      // document.getElementsByTagName("h4")[0].style.color = "brown";
+      document.querySelectorAll("h4")[0].style.color = "brown";
+
+    </script>
+  </body>
+</html>
