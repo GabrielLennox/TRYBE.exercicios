@@ -1,3 +1,5 @@
+// * Parte I - Objetos e For/In
+
 let info = {
   personagem: 'Margarida',
   origem: 'Pato Donald',
