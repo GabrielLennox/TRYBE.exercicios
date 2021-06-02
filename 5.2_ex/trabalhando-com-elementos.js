@@ -9,7 +9,7 @@ currentPosition.parentElement.style.color = 'green';
 // ? 3 - Acesse o primeiroFilhoDoFilho e adicione um texto a ele.
 
 const firstSonOfSon = currentPosition.firstElementChild;
-firstSonOfSon.innerHTML = 'Primeiro filho do filho';
+firstSonOfSon.innerHTML = '<p>Primeiro filho do filho</p>';
 
 // ? 4 - Acesse o primeiroFilho a partir de pai.
 
@@ -31,3 +31,31 @@ const thirdChild = currentPosition.nextElementSibling;
 // ? 8 - Agora acesse o terceiroFilho a partir de pai.
 
 const otherThirdChild = fatherNode.lastElementChild.previousElementSibling;
+
+// ? ----
+// ? PT 2
+// ? ----
+
+// ? 1 - Crie um irmão para elementoOndeVoceEsta.
+
+const currentBrother = document.createElement('div');
+
+currentPosition.insertAdjacentElement('afterend', currentBrother);
+
+// ? 2 - Crie um filho para elementoOndeVoceEsta.
+
+const currentSon = document.createElement('div');
+
+currentPosition.appendChild(currentSon);
+
+// ? 3 - Crie um filho para primeiroFilhoDoFilho.
+
+const sonOfFirstSonOfSon = document.createElement('div');
+
+firstSonOfSon.appendChild(sonOfFirstSonOfSon);
+
+// ? 4 - A partir desse filho criado, acesse terceiroFilho.
+
+const createdDiv = firstSonOfSon.lastElementChild;
+
+console.log(createdDiv.parentNode.parentNode.parentNode.children[3]);
