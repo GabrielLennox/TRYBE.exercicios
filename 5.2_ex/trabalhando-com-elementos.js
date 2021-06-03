@@ -58,4 +58,84 @@ firstSonOfSon.appendChild(sonOfFirstSonOfSon);
 
 const createdDiv = firstSonOfSon.lastElementChild;
 
-console.log(createdDiv.parentNode.parentNode.parentNode.children[3]);
+// * console.log(createdDiv.parentNode.parentNode.parentNode.children[3]);
+
+// ? ----
+// ? PT 3
+// ? ----
+
+// ? 1 - Remova todos os elementos filhos de paiDoPai exceto pai , elementoOndeVoceEsta e primeiroFilhoDoFilho.
+
+// for (let index = 0; index < fatherNode.parentNode.childNodes.length; index += 1) {
+// fatherNode.parentNode.removeChild(fatherNode.parentNode.childNodes[index]);
+// }
+
+// for (let index = 0; index < fatherNode.childNodes.length; index += 1) {
+// fatherNode.removeChild(fatherNode.childNodes[index]);
+// }
+// while (fatherNode.firstChild.id !== 'elementoOndeVoceEsta') {
+// let removedElement = fatherNode.removeChild(fatherNode.lastChild);
+// console.log(removedElement);
+// }
+
+// for (let index = 0; index < fatherNode.length; index += 1) {
+//   fatherNode.removeChild(fatherOfFatherChildNodes[index]);
+// }
+
+// const pai = document.getElementById('pai');
+
+// for (let index = pai.childNodes.length - 1; index >= 0; index -= 1) {
+//   const currentChildren = pai.childNodes[index];
+//   if (currentChildren.id !== 'elementoOndeVoceEsta') {
+//     currentChildren.remove();
+//   }
+// }
+
+// const segundoEUltimoFilhoDoFilho = document.getElementById('segundoEUltimoFilhoDoFilho');
+// segundoEUltimoFilhoDoFilho.remove();
+
+// for (const element of currentPosition.childNodes) {
+//   if (element.id !== 'primeiroFilhoDoFilho') {
+//     element.remove();
+//   }
+// }
+
+// for (const element of fatherNode.childNodes) {
+//   if (element.id !== 'elementoOndeVoceEsta') {
+//     element.remove();
+//   }
+// }
+
+// for (const element of fatherNode.parentNode.childNodes) {
+//   if (element.id !== 'pai') {
+//     element.remove();
+//   }
+// }
+
+// console.log(fatherNode.parentNode.childNodes);
+// console.log(fatherNode.childNodes);
+// console.log(currentPosition.childNodes);
+
+function removeAllChildrenExcept (element, id) {
+  for (let index = element.childNodes.length - 1; index >= 0; index -= 1) {
+    const currentChildren = element.childNodes[index];
+    if (currentChildren.id !== id) {
+      currentChildren.remove();
+    }
+  }
+}
+
+removeAllChildrenExcept(currentPosition, 'primeiroFilhoDoFilho');
+
+console.log(currentPosition.childNodes);
+
+removeAllChildrenExcept(fatherNode, 'elementoOndeVoceEsta');
+
+console.log(fatherNode.childNodes);
+
+removeAllChildrenExcept(fatherNode.parentNode, 'pai');
+
+console.log(fatherNode.parentNode.childNodes);
+
+// * solucao baseada em gabarito
+// * Source: https://app.betrybe.com/course/fundamentals/javascript/dom-manipulation/js-part-6-solutions
